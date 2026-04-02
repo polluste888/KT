@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import MealItem from './MealItem.js'
+import '../index.css'
 
 fetch("/meals")
  .then(res => res.json())
@@ -29,7 +31,19 @@ const Meals = () => {
         fetchMeals()
     }, [])
 
-    return null
+     return (
+        <ul id="meals">
+          {meals.map((meal) => (
+            <MealItem
+              key={meal.id}
+              name={meal.name}
+              price={meal.price}
+              description={meal.description}
+              image={meal.image}
+            />
+          ))}
+        </ul>
+      );
 }
 
 export default Meals;
