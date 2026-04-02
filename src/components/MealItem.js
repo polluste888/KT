@@ -2,10 +2,10 @@ const MealItem = (props) => {
     return (
         <li>
             <article>
-                <img src={require(`../assets/${props.meal.image}`)} alt={props.meal.name}/>
+                <img src={`/assets/${props.meal.image}`} alt={props.meal.name}/>
                 <div>
                     <h3>{props.meal.name}</h3>
-                    <p>props.meal.price</p>
+                    <p className="price">${props.meal.price}</p>
                     <p>{props.meal.description}</p>
                 </div>
                 <p>
@@ -13,8 +13,7 @@ const MealItem = (props) => {
                 </p>
             </article>
         </li>
-        
     )
 }
 
-export default MealItem
+export default MealItem;

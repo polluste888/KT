@@ -1,3 +1,12 @@
+
+fetch("/meals")
+ .then(res => res.json())
+ .then(val => {
+
+   console.log(val);
+ })
+
+
 const Meals = () => {
     return (
         <ul id="meals">
@@ -8,4 +17,4 @@ const Meals = () => {
     )
 }
 
-export default Meals
+export default Meals;
