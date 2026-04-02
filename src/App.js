@@ -1,11 +1,17 @@
 import Header from './components/Header.js'
 import Meals from './components/Meals.js'
+import { CartProv } from './store/CartContext.js';
 
 const App = () => {
  return (
     <>
+    <CartProv>
+
       <Header />
-      <Meals />
+      <main>
+        <Meals />
+      </main>
+      </CartProv>
     </>
   );
 }
