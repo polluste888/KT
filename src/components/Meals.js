@@ -2,20 +2,12 @@ import { useEffect, useState } from "react";
 import MealItem from './MealItem.js'
 import '../index.css'
 
-fetch("/meals")
- .then(res => res.json())
- .then(val => {
-
-   console.log(val);
- })
-
-
 const Meals = () => {
    const [meals, setMeals] = useState([])
    useEffect(() => {
         const fetchMeals = async () => {
             try {
-                // Tuleb paring backendist
+                
                 const response = await fetch("http://localhost:3001/meals") 
                 if (!response.ok) {
                     throw new Error("Failed to fetch meals.")

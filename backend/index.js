@@ -25,7 +25,7 @@ app.get("/meals", async (req, res) => {
     res.json(meals);
   } catch (error) {
     console.error("Viga meals.json lugemisel:", error);
-    res.status(500).json({ error: "Toitude andmete lugemine ebaõnnestus" });
+    res.status(500).json({ error: "Toitude lugemine ebaõnnestus" });
   }
 });
 
